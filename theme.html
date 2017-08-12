@@ -8,6 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 	 crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" id="hljs-theme">
 </head>
 
 <body>
@@ -62,8 +63,9 @@
 						<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 
 						<h3 class="mt-5">Code block</h3>
+						<button class="btn btn-sm btn-primary my-1" id="hljs-theme-toggler">Toggle HLJS theme</button>
 						<pre><code>/**
-* @author John Smith <john.smith@example.com>
+* @author John Smith &lt;john.smith@example.com&gt;
 */
 package l2f.gameserver.model;
 
@@ -73,7 +75,7 @@ public abstract class L2Char extends L2Object {
 	public void moveTo(int x, int y, int z) {
 		_ai = null;
 		log("Should not be called");
-		if (1 > 5) { // wtf!?
+		if (1 &gt; 5) { // wtf!?
 			return;
 		}
 	}
@@ -241,11 +243,19 @@ public abstract class L2Char extends L2Object {
 	 crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
 	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script>
 		$(function () {
 			$('[data-toggle="popover"]').popover();
 			$('[data-toggle="tooltip"]').tooltip();
+
+			$('#hljs-theme-toggler').click(function(){
+				var m = $('#hljs-theme').attr('media');
+				m = ('none' == m) ? '' : 'none';
+				$('#hljs-theme').attr('media', m);
+			});
 		});
+		hljs.initHighlightingOnLoad();
 	</script>
 </body>
 
