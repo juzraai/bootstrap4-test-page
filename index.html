@@ -25,7 +25,7 @@
 		</div>
 	</header>
 
-	<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+	<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
 		<div class="container">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false"
 			 aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
 			</div>
 			<div class="container">
 				<div class="row px-5">
-					<div class="col-6">
+					<div class="col-md-6">
 						<h1>h1. Bootstrap heading</h1>
 						<h2>h2. Bootstrap heading</h2>
 						<h3>h3. Bootstrap heading</h3>
@@ -118,7 +118,7 @@
 						</p>
 						<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
 					</div>
-					<div class="col-6">
+					<div class="col-md-6">
 						<h1 class="display-1">Display 1</h1>
 						<h1 class="display-2">Display 2</h1>
 						<h1 class="display-3">Display 3</h1>
@@ -234,7 +234,9 @@ public abstract class L2Char extends L2Object {
 					</div>
 				</div>
 				<div class="row px-5">
-					<h3 class="mt-5">Definition list</h3>
+					<div class="col-12">
+						<h3 class="mt-5">Definition list</h3>
+					</div>
 				</div>
 				<dl class="row px-5">
 					<dt class="col-sm-3">Description lists</dt>
@@ -260,6 +262,21 @@ public abstract class L2Char extends L2Object {
 						</dl>
 					</dd>
 				</dl>
+
+				<div class="row px-5">
+					<div class="col-12">
+						<h3 class="mt-5">Background colors</h3>
+						<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+						<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+						<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+						<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+						<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
+						<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+						<div class="p-3 mb-2 bg-light text-gray-dark">.bg-light</div>
+						<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+						<div class="p-3 mb-2 bg-white text-gray-dark">.bg-white</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -274,12 +291,19 @@ public abstract class L2Char extends L2Object {
 					<div class="col-12">
 						<h3 class="mt-5">Responsive image</h3>
 						<img data-src="holder.js/100px250" alt="responsive image" class="img-fluid">
-
+					</div>
+					<div class="col-md-6">
 						<h3 class="mt-5">Thumbnail</h3>
 						<img src="holder.js/200x200" alt="thumbnail image" class="img-thumbnail">
 					</div>
+					<div class="col-md-6">
+							<h3 class="mt-5">Figure</h3>
+						<figure class="figure">
+							<img data-src="holder.js/300x200" class="figure-img img-fluid rounded" alt="Figure">
+							<figcaption class="figure-caption">A caption for the above image.</figcaption>
+						</figure>
+					</div>
 				</div>
-
 			</div>
 		</section>
 
@@ -291,7 +315,7 @@ public abstract class L2Char extends L2Object {
 			</div>
 			<div class="container">
 				<div class="row px-5">
-					<div class="col-6">
+					<div class="col-md-6">
 						<h3 class="mt-5">Table</h3>
 						<table class="table table-bordered table-striped table-hover">
 							<thead>
@@ -324,7 +348,7 @@ public abstract class L2Char extends L2Object {
 							</tbody>
 						</table>
 					</div>
-					<div class="col-6">
+					<div class="col-md-6">
 						<h3 class="mt-5">Inversed table</h3>
 						<table class="table table-bordered table-striped table-hover table-inverse">
 							<thead>
@@ -359,7 +383,7 @@ public abstract class L2Char extends L2Object {
 					</div>
 				</div>
 				<div class="row px-5">
-					<div class="col-6">
+					<div class="col-md-6">
 						<h3 class="mt-5">Table with colors</h3>
 						<p><strong>Note: </strong> Use <code>table-*</code> classes.</p>
 						<table class="table table-hover">
@@ -426,7 +450,7 @@ public abstract class L2Char extends L2Object {
 							</tbody>
 						</table>
 					</div>
-					<div class="col-6">
+					<div class="col-md-6">
 						<h3 class="mt-5">Inversed table with colors</h3>
 						<p><strong>Note: </strong> Use <code>bg-*</code> and <code>text-*</code> classes.</p>
 						<table class="table table-hover table-inverse">
@@ -482,6 +506,40 @@ public abstract class L2Char extends L2Object {
 									<th scope="row">Dark</th>
 									<td>Column content</td>
 									<td>Column content</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row px-5">
+					<div class="col-12">
+						<h3 class="mt-5">Small table</h3>
+						<table class="table table-sm">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Username</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
 								</tr>
 							</tbody>
 						</table>
