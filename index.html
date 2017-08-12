@@ -87,47 +87,7 @@
 						<p><small>This line of text is meant to be treated as fine print.</small></p>
 						<p><strong>This line rendered as bold text.</strong></p>
 						<p><em>This line rendered as italicized text.</em></p>
-
-						<h3 class="mt-5">Abbreviation</h3>
-						<p><abbr title="attribute">attr</abbr></p>
-						<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
-
-						<h3 class="mt-5">Code block</h3>
-						<button class="btn btn-sm btn-primary my-1" id="hljs-theme-toggler">Toggle HLJS theme</button>
-						<pre><code>/**
- * @author John Smith &lt;john.smith@example.com&gt;
- */
-package l2f.gameserver.model;
-
-public abstract class L2Char extends L2Object {
-	public static final Short ERROR = 0x0001;
-
-	public void moveTo(int x, int y, int z) {
-		_ai = null;
-		log("Should not be called");
-		if (1 &gt; 5) { // wtf!?
-			return;
-		}
-	}
-}</code></pre>
-					</div>
-					<div class="col-6">
-						<h1 class="display-1">Display 1</h1>
-						<h1 class="display-2">Display 2</h1>
-						<h1 class="display-3">Display 3</h1>
-						<h1 class="display-4">Display 4</h1>
-
-						<h3 class="mt-5">Sample body</h3>
-						<p class="text-justify">
-							Lórum ipse - mint senyért - nyált <a href="javascript:void(0)">ságos iség</a>, ahol beles metás, csaprozás, vermény,
-							csaprát és más meni zsorlóca kuncáskodik. Mosztag, férzet napé, fuvódás 11, törnyélés ; valamint szuvegés vitancs:
-							a dozmus drikója, jultsás kelés magyarul. A szuvegés és gyarány pasztákban buggyos mendernyékről, filingéjükről és
-							pucájukról húzódik a fabampa. Hűtő benne a legújabban belég mendernyék mártja is, részletesen sáskodik a kétenc fríg
-							lepkonyaival. Csétletésről cigál le egy kéző lengelész csapárába rimulnia, ahol három másik szivény együtt érleti
-							spotráit. Ha a bénulás summája kalkodik, úgy púdulhat, mintha az volna a sülső csoltása, hogy a szedhentes és egyes
-							tengyelét lécetse ki a pávágyokból. Ez vajon vertető ölyök vagy vegítő dosna? Szalalizál bunya a felegesben olyan
-							szellőző kedő, amely farisban kevetteti a nyagondos hizmusok „énemlő” lárias mizmusait?
-						</p>
+						<p><abbr title="Abbreviation">abbr</abbr> <abbr title="Abbreviation with initialism" class="initialism">abbr+init</abbr></p>
 
 						<h3 class="mt-5">Colors</h3>
 						<p>
@@ -157,6 +117,43 @@ public abstract class L2Char extends L2Object {
 						<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>ctrl</kbd>							+ <kbd>,</kbd></kbd>
 						</p>
 						<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+					</div>
+					<div class="col-6">
+						<h1 class="display-1">Display 1</h1>
+						<h1 class="display-2">Display 2</h1>
+						<h1 class="display-3">Display 3</h1>
+						<h1 class="display-4">Display 4</h1>
+
+						<h3 class="mt-5">Sample body</h3>
+						<p class="text-justify">
+							Lórum ipse - mint senyért - nyált <a href="javascript:void(0)">ságos iség</a>, ahol beles metás, csaprozás, vermény,
+							csaprát és más meni zsorlóca kuncáskodik. Mosztag, férzet napé, fuvódás 11, törnyélés ; valamint szuvegés vitancs:
+							a dozmus drikója, jultsás kelés magyarul. A szuvegés és gyarány pasztákban buggyos mendernyékről, filingéjükről és
+							pucájukról húzódik a fabampa. Hűtő benne a legújabban belég mendernyék mártja is, részletesen sáskodik a kétenc fríg
+							lepkonyaival. Csétletésről cigál le egy kéző lengelész csapárába rimulnia, ahol három másik szivény együtt érleti
+							spotráit. Ha a bénulás summája kalkodik, úgy púdulhat, mintha az volna a sülső csoltása, hogy a szedhentes és egyes
+							tengyelét lécetse ki a pávágyokból. Ez vajon vertető ölyök vagy vegítő dosna? Szalalizál bunya a felegesben olyan
+							szellőző kedő, amely farisban kevetteti a nyagondos hizmusok „énemlő” lárias mizmusait?
+						</p>
+
+						<h3 class="mt-5">Code block</h3>
+						<button class="btn btn-sm btn-primary my-1" id="hljs-theme-toggler">Toggle HLJS theme</button>
+						<pre><code>/**
+ * @author John Smith &lt;john.smith@example.com&gt;
+ */
+package l2f.gameserver.model;
+
+public abstract class L2Char extends L2Object {
+	public static final Short ERROR = 0x0001;
+
+	public void moveTo(int x, int y, int z) {
+		_ai = null;
+		log("Should not be called");
+		if (1 &gt; 5) { // wtf!?
+			return;
+		}
+	}
+}</code></pre>
 					</div>
 				</div>
 				<div class="row px-5">
@@ -433,61 +430,61 @@ public abstract class L2Char extends L2Object {
 						<h3 class="mt-5">Inversed table with colors</h3>
 						<p><strong>Note: </strong> Use <code>bg-*</code> and <code>text-*</code> classes.</p>
 						<table class="table table-hover table-inverse">
-								<thead>
-									<tr>
-										<th>Type</th>
-										<th>Column heading</th>
-										<th>Column heading</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row">Default</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-primary">
-										<th scope="row">Primary</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-secondary">
-										<th scope="row">Secondary</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-success">
-										<th scope="row">Success</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-danger">
-										<th scope="row">Danger</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-warning text-dark">
-										<th scope="row">Warning</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-info">
-										<th scope="row">Info</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-light text-dark">
-										<th scope="row">Light</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-									<tr class="bg-dark">
-										<th scope="row">Dark</th>
-										<td>Column content</td>
-										<td>Column content</td>
-									</tr>
-								</tbody>
-							</table>
+							<thead>
+								<tr>
+									<th>Type</th>
+									<th>Column heading</th>
+									<th>Column heading</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Default</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-primary">
+									<th scope="row">Primary</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-secondary">
+									<th scope="row">Secondary</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-success">
+									<th scope="row">Success</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-danger">
+									<th scope="row">Danger</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-warning text-dark">
+									<th scope="row">Warning</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-info">
+									<th scope="row">Info</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-light text-dark">
+									<th scope="row">Light</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="bg-dark">
+									<th scope="row">Dark</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
