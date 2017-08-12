@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" id="top">
 
@@ -50,262 +52,19 @@
 		<section class="bg-warning py-2 text-center">
 			<strong>Under development! 😎</strong>
 		</section>
-		<section class="mb-5 pt-5" id="typography">
-			<div class="row bg-light py-4 mb-5">
+
+		{% for section in site.data.sections %}
+			<section class="mb-5 pt-5" id="{{ section.id }}">
+				<div class="row bg-light py-4 mb-5">
+					<div class="container">
+						<h2>{{ section.heading }}</h2>
+					</div>
+				</div>
 				<div class="container">
-					<h2>Typography</h2>
+					{% include {{ section.id }}.html %}
 				</div>
-			</div>
-			<div class="container">
-				<div class="row px-5">
-					<div class="col-md-6">
-						<h1>h1. Bootstrap heading</h1>
-						<h2>h2. Bootstrap heading</h2>
-						<h3>h3. Bootstrap heading</h3>
-						<h4>h4. Bootstrap heading</h4>
-						<h5>h5. Bootstrap heading</h5>
-						<h6>h6. Bootstrap heading</h6>
-
-						<h3 class="mt-5">Lead</h3>
-						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-
-						<h3 class="mt-5">Styles</h3>
-						<p>You can use the mark tag to
-							<mark>highlight</mark> text.</p>
-						<p>
-							<del>This line of text is meant to be treated as deleted text.</del>
-						</p>
-						<p>
-							<s>This line of text is meant to be treated as no longer accurate.</s>
-						</p>
-						<p>
-							<ins>This line of text is meant to be treated as an addition to the document.</ins>
-						</p>
-						<p>
-							<u>This line of text will render as underlined</u>
-						</p>
-						<p><small>This line of text is meant to be treated as fine print.</small></p>
-						<p><strong>This line rendered as bold text.</strong></p>
-						<p><em>This line rendered as italicized text.</em></p>
-						<p><abbr title="Abbreviation">abbr</abbr> <abbr title="Abbreviation with initialism" class="initialism">abbr+init</abbr></p>
-
-						<h3 class="mt-5">Colors</h3>
-						<p>
-							<span class="text-primary">.text-primary</span>
-							<span class="text-secondary">.text-secondary</span>
-							<span class="text-success">.text-success</span>
-							<span class="text-danger">.text-danger</span>
-							<span class="text-warning">.text-warning</span>
-							<span class="text-info">.text-info</span>
-							<span class="text-light">.text-light</span>
-							<span class="text-dark">.text-dark</span>
-						</p>
-						<p>
-							<span><a href="#" class="text-primary">Primary link</a></span>
-							<span><a href="#" class="text-secondary">Secondary link</a></span>
-							<span><a href="#" class="text-success">Success link</a></span>
-							<span><a href="#" class="text-danger">Danger link</a></span>
-							<span><a href="#" class="text-warning">Warning link</a></span>
-							<span><a href="#" class="text-info">Info link</a></span>
-							<span><a href="#" class="text-light bg-gray">Light link</a></span>
-							<span><a href="#" class="text-dark">Dark link</a></span>
-						</p>
-
-						<h3 class="mt-5">Inline code</h3>
-						<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
-						<p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
-						<p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>ctrl</kbd>							+ <kbd>,</kbd></kbd>
-						</p>
-						<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
-					</div>
-					<div class="col-md-6">
-						<h1 class="display-1">Display 1</h1>
-						<h1 class="display-2">Display 2</h1>
-						<h1 class="display-3">Display 3</h1>
-						<h1 class="display-4">Display 4</h1>
-
-						<h3 class="mt-5">Sample body</h3>
-						<p class="text-justify">
-							Lórum ipse - mint senyért - nyált <a href="javascript:void(0)">ságos iség</a>, ahol beles metás, csaprozás, vermény,
-							csaprát és más meni zsorlóca kuncáskodik. Mosztag, férzet napé, fuvódás 11, törnyélés ; valamint szuvegés vitancs:
-							a dozmus drikója, jultsás kelés magyarul. A szuvegés és gyarány pasztákban buggyos mendernyékről, filingéjükről és
-							pucájukról húzódik a fabampa. Hűtő benne a legújabban belég mendernyék mártja is, részletesen sáskodik a kétenc fríg
-							lepkonyaival. Csétletésről cigál le egy kéző lengelész csapárába rimulnia, ahol három másik szivény együtt érleti
-							spotráit. Ha a bénulás summája kalkodik, úgy púdulhat, mintha az volna a sülső csoltása, hogy a szedhentes és egyes
-							tengyelét lécetse ki a pávágyokból. Ez vajon vertető ölyök vagy vegítő dosna? Szalalizál bunya a felegesben olyan
-							szellőző kedő, amely farisban kevetteti a nyagondos hizmusok „énemlő” lárias mizmusait?
-						</p>
-
-						<h3 class="mt-5">Code block</h3>
-						<button class="btn btn-sm btn-primary my-1" id="hljs-theme-toggler">Toggle HLJS theme</button>
-						<pre><code>/**
- * @author John Smith &lt;john.smith@example.com&gt;
- */
-package l2f.gameserver.model;
-
-public abstract class L2Char extends L2Object {
-	public static final Short ERROR = 0x0001;
-
-	public void moveTo(int x, int y, int z) {
-		_ai = null;
-		log("Should not be called");
-		if (1 &gt; 5) { // wtf!?
-			return;
-		}
-	}
-}</code></pre>
-					</div>
-				</div>
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">Blockquote</h3>
-						<blockquote class="blockquote">
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-						</blockquote>
-					</div>
-				</div>
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">...centered</h3>
-						<blockquote class="blockquote text-center">
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-						</blockquote>
-					</div>
-				</div>
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">...on right</h3>
-						<blockquote class="blockquote text-right">
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-						</blockquote>
-					</div>
-				</div>
-				<div class="row px-5">
-					<div class="col-4">
-						<h3 class="mt-5">List</h3>
-						<ul>
-							<li>Lorem ipsum dolor sit amet</li>
-							<li>Consectetur adipiscing elit</li>
-							<li>Integer molestie lorem at massa</li>
-							<li>Facilisis in pretium nisl aliquet</li>
-							<li>Nulla volutpat aliquam velit
-								<ul>
-									<li>Phasellus iaculis neque</li>
-									<li>Purus sodales ultricies</li>
-									<li>Vestibulum laoreet porttitor sem</li>
-									<li>Ac tristique libero volutpat at</li>
-								</ul>
-							</li>
-							<li>Faucibus porta lacus fringilla vel</li>
-							<li>Aenean sit amet erat nunc</li>
-							<li>Eget porttitor lorem</li>
-						</ul>
-					</div>
-					<div class="col-4">
-						<h3 class="mt-5">...unstyled</h3>
-						<ul class="list-unstyled">
-							<li>Lorem ipsum dolor sit amet</li>
-							<li>Consectetur adipiscing elit</li>
-							<li>Integer molestie lorem at massa</li>
-							<li>Facilisis in pretium nisl aliquet</li>
-							<li>Nulla volutpat aliquam velit
-								<ul>
-									<li>Phasellus iaculis neque</li>
-									<li>Purus sodales ultricies</li>
-									<li>Vestibulum laoreet porttitor sem</li>
-									<li>Ac tristique libero volutpat at</li>
-								</ul>
-							</li>
-							<li>Faucibus porta lacus fringilla vel</li>
-							<li>Aenean sit amet erat nunc</li>
-							<li>Eget porttitor lorem</li>
-						</ul>
-					</div>
-					<div class="col-4">
-						<h3 class="mt-5">...inline</h3>
-						<ul class="list-inline">
-							<li class="list-inline-item">Lorem ipsum</li>
-							<li class="list-inline-item">Phasellus iaculis</li>
-							<li class="list-inline-item">Nulla volutpat</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">Definition list</h3>
-					</div>
-				</div>
-				<dl class="row px-5">
-					<dt class="col-sm-3">Description lists</dt>
-					<dd class="col-sm-9">A description list is perfect for defining terms.</dd>
-
-					<dt class="col-sm-3">Euismod</dt>
-					<dd class="col-sm-9">
-						<p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-						<p>Donec id elit non mi porta gravida at eget metus.</p>
-					</dd>
-
-					<dt class="col-sm-3">Malesuada porta</dt>
-					<dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-
-					<dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-					<dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-
-					<dt class="col-sm-3">Nesting</dt>
-					<dd class="col-sm-9">
-						<dl class="row">
-							<dt class="col-sm-4">Nested definition list</dt>
-							<dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-						</dl>
-					</dd>
-				</dl>
-
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">Background colors</h3>
-						<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
-						<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
-						<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
-						<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-						<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
-						<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
-						<div class="p-3 mb-2 bg-light text-gray-dark">.bg-light</div>
-						<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-						<div class="p-3 mb-2 bg-white text-gray-dark">.bg-white</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="mb-5 pt-5" id="images">
-			<div class="row bg-light py-4 mb-5">
-				<div class="container">
-					<h2>Images</h2>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row px-5">
-					<div class="col-12">
-						<h3 class="mt-5">Responsive image</h3>
-						<img data-src="holder.js/100px250" alt="responsive image" class="img-fluid">
-					</div>
-					<div class="col-md-6">
-						<h3 class="mt-5">Thumbnail</h3>
-						<img src="holder.js/200x200" alt="thumbnail image" class="img-thumbnail">
-					</div>
-					<div class="col-md-6">
-						<h3 class="mt-5">Figure</h3>
-						<figure class="figure">
-							<img data-src="holder.js/300x200" class="figure-img img-fluid rounded" alt="Figure">
-							<figcaption class="figure-caption">A caption for the above image.</figcaption>
-						</figure>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		{% endfor %}
 
 		<section class="mb-5 pt-5" id="tables">
 			<div class="row bg-light py-4 mb-5">
@@ -317,69 +76,11 @@ public abstract class L2Char extends L2Object {
 				<div class="row px-5">
 					<div class="col-md-6">
 						<h3 class="mt-5">Table</h3>
-						<table class="table table-bordered table-striped table-hover">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-								</tr>
-							</tbody>
-						</table>
+						{% include table.html tableClasses="table-bordered table-striped table-hover" %}
 					</div>
 					<div class="col-md-6">
 						<h3 class="mt-5">Inversed table</h3>
-						<table class="table table-bordered table-striped table-hover table-inverse">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-								</tr>
-							</tbody>
-						</table>
+						{% include table.html tableClasses="table-bordered table-striped table-hover table-inverse" %}
 					</div>
 				</div>
 				<div class="row px-5">
@@ -514,103 +215,17 @@ public abstract class L2Char extends L2Object {
 				<div class="row px-5">
 					<div class="col-md-6">
 						<h3 class="mt-5">Default header</h3>
-						<table class="table">
-							<thead class="thead-default">
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-								</tr>
-							</tbody>
-						</table>
+						{% include table.html theadClasses="thead-default" %}
 					</div>
 					<div class="col-md-6">
 						<h3 class="mt-5">Inversed header</h3>
-						<table class="table">
-							<thead class="thead-inverse">
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-								</tr>
-							</tbody>
-						</table>
+						{% include table.html theadClasses="thead-inverse" %}
 					</div>
 				</div>
 				<div class="row px-5">
 					<div class="col-md-6">
 						<h3 class="mt-5">Small table</h3>
-						<table class="table table-sm">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td colspan="2">Larry the Bird</td>
-									<td>@twitter</td>
-								</tr>
-							</tbody>
-						</table>
+						{% include table.html tableClasses="table-sm" %}
 					</div>
 				</div>
 			</div>
@@ -623,8 +238,9 @@ public abstract class L2Char extends L2Object {
 			</div>
 			<div class="container">
 				<div class="row px-5">
+					{% for color in site.data.colors %}
 					<div class="col-md-4">
-						<div class="alert alert-success" role="alert">
+						<div class="alert alert-{{ color }}" role="alert">
 							<h4 class="alert-heading">Well done!</h4>
 							<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that
 								you can see how spacing within an alert works with this kind of content. Also here is an <a href="javascript:void(0)" class="alert-link">example alert link</a>.</p>
@@ -632,6 +248,7 @@ public abstract class L2Char extends L2Object {
 							<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 						</div>
 					</div>
+					{% endfor %}
 				</div>
 			</div>
 		</section>
