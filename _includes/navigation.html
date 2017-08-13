@@ -1,0 +1,20 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+	<div class="container">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false"
+		 aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="my-navbar">
+			<div class="navbar-nav mr-auto">
+				<a class="nav-item nav-link" href="#top">Top</a>
+				{% for section in site.data.sections %}
+					<a class="nav-item nav-link" href="#{{ section | handleize | downcase }}">{{ section }}</a>
+				{% endfor %}
+			</div>
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="https://getbootstrap.com/docs/4.0/" target="_blank">Bootstrap docs</a>
+				<a class="nav-item nav-link" href="https://github.com/juzraai/bootstrap4-test-page">GitHub</a>
+			</div>
+		</div>
+	</div>
+</nav>

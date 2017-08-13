@@ -1,6 +1,4 @@
-- id:      typography
-  nav:     Typo
-  heading: Typography
-- id:      images
-  nav:     Images
-  heading: Images
+- Typography
+- Images
+- Tables
+- Alerts

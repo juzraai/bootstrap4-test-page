@@ -1,0 +1,30 @@
+<div class="row px-5">
+		<div class="col-12">
+			<h3 class="mt-5">Simple alerts</h3>
+		</div>
+		{% for color in site.data.colors %}
+			{% if color == "white" %}{% continue %}{% endif %}
+			<div class="col-md-4">
+				<div class="alert alert-{{ color }}" role="alert">
+					.alert-{{ color }}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+<div class="row px-5">
+	<div class="col-12">
+		<h3 class="mt-5">Alerts with additional content</h3>
+	</div>
+	{% for color in site.data.colors %}
+		{% if color == "white" %}{% continue %}{% endif %}
+		<div class="col-md-4">
+			<div class="alert alert-{{ color }}" role="alert">
+				<h4 class="alert-heading">Well done!</h4>
+				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that
+					you can see how spacing within an alert works with this kind of content. Also here is an <a href="javascript:void(0)" class="alert-link">example alert link</a>.</p>
+				<hr>
+				<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+			</div>
+		</div>
+	{% endfor %}
+</div>

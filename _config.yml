@@ -4,3 +4,8 @@ baseurl:     "/bootstrap4-test-page"
 description: "Sample page for Bootstrap 4 components. Try out the default theme or your custom stylesheet."
 title:       "Bootstrap 4 test page"
 url:         "https://juzraai.github.io"
+
+# build
+exclude:
+  - LICENSE
+  - README.md
