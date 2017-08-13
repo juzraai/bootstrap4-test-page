@@ -29,6 +29,7 @@
 		<p><small>This line of text is meant to be treated as fine print.</small></p>
 		<p><strong>This line rendered as bold text.</strong></p>
 		<p><em>This line rendered as italicized text.</em></p>
+		<p class="text-muted">And this is a muted text.</p>
 		<p><abbr title="Abbreviation">abbr</abbr> <abbr title="Abbreviation with initialism" class="initialism">abbr+init</abbr></p>
 
 		<h3 class="mt-5">Colors</h3>
@@ -184,14 +185,12 @@
 <div class="row px-5">
 	<div class="col-12">
 		<h3 class="mt-5">Background colors</h3>
-		<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
-		<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
-		<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
-		<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-		<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
-		<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
-		<div class="p-3 mb-2 bg-light text-gray-dark">.bg-light</div>
-		<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-		<div class="p-3 mb-2 bg-white text-gray-dark">.bg-white</div>
+	</div>
+		{% for color in site.data.colors %}
+			{% capture textClass %}{% if color == "light" or color == "white" or color == "warning" %}text-dark{% else %}text-white{% endif %}{% endcapture %}
+			<div class="col-md-4">
+				<div class="p-3 mb-2 bg-{{ color }} {{ textClass }}">.bg-{{ color }}</div>
+			</div>
+		{% endfor %}
 	</div>
 </div>
