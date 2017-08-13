@@ -1,19 +1,38 @@
-- Typography
-- Images
-- Tables
-- Alerts
-- Badges
-- Breadcrumbs
-- Buttons
+- name: Typography
+  icon: paragraph
+- name: Images
+  icon: picture-o
+- name: Tables
+  icon: table
+- name: Alerts
+  icon: exclamation-triangle
+- name: Badges
+  icon: tag
+- name: Navs
+  icon: bars
+- name: Buttons
+  icon: square
+- name: Jumbotron
+  icon: bookmark
 
 # TODO:
-# - Cards
-# - Forms (including Input groups)
-# - Jumbotron
-# - List groups
-# - Modals
-# - Navs
-# - Navbars
-# - Pagination -> Buttons (?)
-# - Popovers (including Tooltips)
-# - Progressbars
+# Media -> Images
+# Navs, Navbars -> Navs
+# Pagination -> Buttons
+
+# + reorder?
+
+# - name: Cards
+#   icon: window-maximize
+# - name: Forms (including Input groups)
+#   icon: check-square
+# - name: Jumbotron
+#   icon: bookmark
+# - name: List groups
+#   icon: list-ul
+# - name: Modals
+#   icon: window-restore
+# - name: Popovers (including Tooltips)
+#   icon: info-circle
+# - name: Progressbars
+#   icon: spinner

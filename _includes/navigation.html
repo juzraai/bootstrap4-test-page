@@ -6,14 +6,22 @@
 		</button>
 		<div class="collapse navbar-collapse" id="my-navbar">
 			<div class="navbar-nav mr-auto">
-				<a class="nav-item nav-link" href="#top">Top</a>
 				{% for section in site.data.sections %}
-					<a class="nav-item nav-link" href="#{{ section | handleize | downcase }}">{{ section }}</a>
+					{% assign href = section.name | handleize | downcase | prepend: "#" %}
+					{% include generator/nav-link.html href=href name=section.name icon=section.icon %}
 				{% endfor %}
 			</div>
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="https://getbootstrap.com/docs/4.0/" target="_blank">Bootstrap docs</a>
-				<a class="nav-item nav-link" href="https://github.com/juzraai/bootstrap4-test-page">GitHub</a>
+				{% include generator/nav-link.html
+					href="https://getbootstrap.com/docs/4.0/" blank=1
+					name="Bootstrap documentation"
+					icon="book"
+				%}
+				{% include generator/nav-link.html
+					href="https://github.com/juzraai/bootstrap4-test-page"
+					name="Source code"
+					icon="github"
+				%}
 			</div>
 		</div>
 	</div>

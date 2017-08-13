@@ -4,14 +4,21 @@
 	</section>
 
 	{% for section in site.data.sections %}
-		<section class="mb-5 pt-5" id="{{ section | handleize | downcase }}">
+		<section class="mb-5 pt-5" id="{{ section.name | handleize | downcase }}">
 			<div class="row bg-light py-4 mb-5">
 				<div class="container">
-					<h2>{{ section }}</h2>
+					<div class="d-flex justify-content-between">
+							<h2>
+								<span class="fa fa-{{ section.icon }} mr-1"></span>
+								{{ section.name }}
+							</h2>
+							<h2><a href="#top"><span class="fa fa-chevron-up"></span></a></h2>
+					</div>
+
 				</div>
 			</div>
 			<div class="container">
-				{% include section/{{ section | handleize | downcase }}.html %}
+				{% include section/{{ section.name | handleize | downcase }}.html %}
 			</div>
 		</section>
 	{% endfor %}

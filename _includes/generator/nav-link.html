@@ -1,0 +1,5 @@
+<a class="nav-item nav-link" href="{{ include.href }}" {% if include.blank == 1 %}target="_blank"{% endif %}
+	data-toggle="tooltip" data-placement="bottom" title="{{ include.name }}">
+	<span class="fa fa-{{ include.icon }} mx-2"></span>
+	<span class="d-md-none">{{ include.name }}</span>
+</a>
