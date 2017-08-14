@@ -7,7 +7,7 @@
 		<div class="collapse navbar-collapse" id="my-navbar">
 			<div class="navbar-nav mr-auto">
 				{% for section in site.data.sections %}
-					{% assign href = section.name | handleize | downcase | prepend: "#" %}
+					{% assign href = section.name | handleize | replace: ' ', '-' | downcase | prepend: "#" %}
 					{% include generator/nav-link.html href=href name=section.name icon=section.icon %}
 				{% endfor %}
 			</div>
