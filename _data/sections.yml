@@ -4,16 +4,18 @@
   icon: picture-o
 - name: Tables
   icon: table
-- name: Alerts
-  icon: exclamation-triangle
-- name: Badges
-  icon: tag
-- name: Navs
-  icon: bars
-- name: Buttons
-  icon: square
 - name: Jumbotron
   icon: bookmark
+- name: Buttons
+  icon: square
+- name: Navs
+  icon: bars
+- name: Badges
+  icon: tag
+- name: Alerts
+  icon: exclamation-triangle
+- name: Popovers
+  icon: info-circle
 
 # TODO:
 # Media -> Images
@@ -26,13 +28,9 @@
 #   icon: window-maximize
 # - name: Forms (including Input groups)
 #   icon: check-square
-# - name: Jumbotron
-#   icon: bookmark
 # - name: List groups
 #   icon: list-ul
 # - name: Modals
 #   icon: window-restore
-# - name: Popovers (including Tooltips)
-#   icon: info-circle
 # - name: Progressbars
 #   icon: spinner
