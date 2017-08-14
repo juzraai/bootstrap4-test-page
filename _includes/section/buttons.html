@@ -4,25 +4,25 @@
 	<div class="col-12">
 		<h3 class="mt-5">General buttons</h3>
 		<div class="my-1">
-			<button class="btn">Default</button>
 			{% for color in colors %}
 				{% if color == "white" %}{% continue %}{% endif %}
 				<button class="btn btn-{{ color }}">{{ color | capitalize }}</button>
 			{% endfor %}
+			<button class="btn">Default</button>
 		</div>
 		<div class="my-1">
-			<button class="btn active">Default</button>
 			{% for color in colors %}
 				{% if color == "white" %}{% continue %}{% endif %}
 				<button class="btn btn-{{ color }} active">{{ color | capitalize }}</button>
 			{% endfor %}
+			<button class="btn active">Default</button>
 		</div>
 		<div class="my-1">
-			<button class="btn" disabled>Default</button>
 			{% for color in colors %}
 				{% if color == "white" %}{% continue %}{% endif %}
 				<button class="btn btn-{{ color }}" disabled>{{ color | capitalize }}</button>
 			{% endfor %}
+			<button class="btn" disabled>Default</button>
 		</div>
 
 		<h3 class="mt-5">Outline buttons</h3>
@@ -92,5 +92,27 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="col-12">
+		<h3 class="mt-5">Pagination</h3>
+		<nav aria-label="Pagination example">
+			<ul class="pagination">
+				<li class="page-item disabled">
+					<span class="page-link">Previous</span>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item active">
+					<span class="page-link">
+						2
+						<span class="sr-only">(current)</span>
+					</span>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#">Next</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </div>
