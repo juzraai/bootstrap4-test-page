@@ -4,8 +4,10 @@
   icon: picture-o
 - name: Tables
   icon: table
-- name: Jumbotron
+- name: Jumbotrons
   icon: bookmark
+- name: Cards
+  icon: square-o
 - name: Buttons
   icon: square
 - name: Navs
@@ -23,8 +25,6 @@
 # Media -> Images
 # Navs, Navbars -> Navs
 
-# - name: Cards
-#   icon: window-maximize
 # - name: Forms (including Input groups)
 #   icon: check-square
 # - name: List groups
