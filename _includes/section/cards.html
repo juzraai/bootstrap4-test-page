@@ -140,11 +140,11 @@
 	{% for color in site.data.colors %}
 		{% if color == "white" %}{% continue %}{% endif %}
 		{% capture textClass %}{% if color == "light" or color == "warning" %}{% else %}text-white{% endif %}{% endcapture %}
-		<div class="col-sm-6 col-md-4">
+		<div class="col-sm-6 col-md-4 col-xl-3">
 			<div class="card {{ textClass }} bg-{{ color }} mb-3" style="max-width: 20rem;">
 				<div class="card-header">Header</div>
 				<div class="card-body">
-					<h4 class="card-title">{{ color | capitalize }} card title</h4>
+					<h4 class="card-title">{{ color | capitalize }} card</h4>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 				</div>
 			</div>
@@ -157,11 +157,11 @@
 	</div>
 	{% for color in site.data.colors %}
 		{% if color == "white" %}{% continue %}{% endif %}
-		<div class="col-sm-6 col-md-4">
+		<div class="col-sm-6 col-md-4 col-xl-3">
 			<div class="card border-{{ color }} mb-3" style="max-width: 20rem;">
 				<div class="card-header">Header</div>
 				<div class="card-body">
-					<h4 class="card-title">{{ color | capitalize }} card title</h4>
+					<h4 class="card-title">{{ color | capitalize }} card</h4>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 				</div>
 			</div>
