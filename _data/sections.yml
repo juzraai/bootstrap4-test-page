@@ -4,6 +4,8 @@
   icon: picture-o
 - name: Tables
   icon: table
+- name: List groups
+  icon: list-ul
 - name: Jumbotrons
   icon: bookmark
 - name: Cards
@@ -26,7 +28,5 @@
 
 # - name: Forms (including Input groups)
 #   icon: check-square
-# - name: List groups
-#   icon: list-ul
 # - name: Modals
 #   icon: window-restore
