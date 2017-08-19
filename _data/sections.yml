@@ -22,11 +22,11 @@
   icon: info-circle
 - name: Progress bars
   icon: spinner
+- name: Modals
+  icon: window-restore
 
 # TODO:
 # Navs, Navbars -> Navs
 
 # - name: Forms (including Input groups)
 #   icon: check-square
-# - name: Modals
-#   icon: window-restore
