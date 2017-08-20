@@ -6,12 +6,14 @@
   icon: table
 - name: List groups
   icon: list-ul
+- name: Buttons
+  icon: square
 - name: Jumbotrons
   icon: bookmark
 - name: Cards
   icon: square-o
-- name: Buttons
-  icon: square
+- name: Forms
+  icon: pencil
 - name: Navs
   icon: bars
 - name: Badges
@@ -24,6 +26,3 @@
   icon: spinner
 - name: Modals
   icon: window-restore
-
-# - name: Forms (including Input groups)
-#   icon: check-square
