@@ -1,28 +1,111 @@
 - name: Typography
   icon: paragraph
+  docs:
+    - link: content/typography
+      text: Typography
+    - link: content/code
+      text: Code
+    - link: utilities/text
+      text: Text utilities'
+
 - name: Images
   icon: picture-o
+  docs:
+    - link: content/images
+      text: Image
+    - link: content/figures
+      text: Figure
+    - link: layout/media-object
+      text: Media object
+
 - name: Tables
   icon: table
+  docs:
+    - link: content/tables
+      text: Table
+
 - name: List groups
   icon: list-ul
+  docs:
+    - link: components/list-group
+      text: List group
+
 - name: Buttons
   icon: square
+  docs:
+    - link: components/buttons
+      text: Button
+    - link: components/button-group
+      text: Button group
+    - link: components/pagination
+      text: Pagination
+    - link: components/dropdowns
+      text: Dropdown
+
 - name: Jumbotrons
   icon: bookmark
+  docs:
+    - link: components/jumbotron
+      text: Jumbotron
+
 - name: Cards
   icon: square-o
+  docs:
+    - link: components/card
+      text: Card
+
 - name: Forms
   icon: pencil
+  docs:
+    - link: components/forms
+      text: Form
+    - link: components/input-group
+      text: Input group
+
 - name: Navs
   icon: bars
+  docs:
+    - link: components/navbar
+      text: Navbar
+    - link: components/navs
+      text: Navs'
+    - link: components/breadcrumb
+      text: Breadcrumb
+    - link: components/dropdowns
+      text: Dropdown
+    - link: components/scrollspy
+      text: Scrollspy
+    - link: utilities/position
+      text: Position
+
 - name: Badges
   icon: tag
+  docs:
+    - link: components/badge
+      text: Badge
+
 - name: Alerts
   icon: exclamation-triangle
+  docs:
+    - link: components/alerts
+      text: Alert
+
 - name: Popovers
   icon: info-circle
+  docs:
+    - link: components/popovers
+      text: Popover
+    - link: components/tooltips
+      text: Tooltip
+
 - name: Progress bars
   icon: spinner
+  docs:
+    - link: components/progress
+      text: Progress
+
 - name: Modals
   icon: window-restore
+  docs:
+    - link: components/modal
+      text: Modal

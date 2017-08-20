@@ -12,7 +12,13 @@
 								<span class="fa fa-{{ section.icon }} mr-1"></span>
 								{{ section.name }}
 							</h2>
-							<h2><a href="#top"><span class="fa fa-chevron-up"></span></a></h2>
+							<h2>
+								{% for d in section.docs %}
+									<a href="https://getbootstrap.com/docs/4.0/{{ d.link }}/" target="_blank"
+									data-toggle="tooltip" data-placement="bottom" title="{{ d.text }} docs"><span class="fa fa-book fw"></span></a>
+								{% endfor %}
+								<a href="#top" class="ml-3"><span class="fa fa-chevron-up fw"></span></a>
+							</h2>
 					</div>
 
 				</div>
