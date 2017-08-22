@@ -5,8 +5,10 @@
       text: Typography
     - link: content/code
       text: Code
+    - link: utilities/colors
+      text: Color utility
     - link: utilities/text
-      text: Text utilities'
+      text: Text utility
 
 - name: Images
   icon: picture-o

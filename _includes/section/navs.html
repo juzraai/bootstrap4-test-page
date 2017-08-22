@@ -7,11 +7,11 @@
 			{% capture btnClass %}{% if color == "light" or color == "warning" %}dark{% else %}light{% endif %}{% endcapture %}
 			<nav class="navbar navbar-expand-lg navbar-{{ textClass }} bg-{{ color }} my-2">
 				<a class="navbar-brand" href="#">Brand</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-{{ color }}"
 					aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="collapse navbar-collapse" id="navbar-{{ color }}">
 					{% include generator/nav.html navClass="navbar-nav" %}
 					<span class="navbar-text ml-2 mr-auto">Text</span>
 					<form class="form-inline">
